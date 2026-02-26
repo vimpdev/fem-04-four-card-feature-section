@@ -32,7 +32,7 @@ This solution focuses on clean layout architecture, native CSS nesting, and acce
 
 - 🌎 [Live site](https://vimpdev.github.io/fem-04-four-card-feature-section/)
 
-<!-- - 👩‍💻 [Frontend Mentor solution](https://your-solution-url.com) -->
+- 👩‍💻 [Frontend Mentor solution](https://www.frontendmentor.io/solutions/responsive-four-card-feature-section-css-grid-and-native-nesting-oVnriuMW32)
 
 ---
 
