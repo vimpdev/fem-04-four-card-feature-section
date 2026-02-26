@@ -1,121 +1,127 @@
-# Frontend Mentor - Four card feature section solution
+# 🚀 Frontend Mentor - Four card feature section solution
 
-This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK).  
+A responsive four card feature section built with semantic HTML and modern CSS.  
+This solution focuses on clean layout architecture, native CSS nesting, and accessibility best practices.
 
-## Table of contents
+---
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+## 🎬 Demo
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+<p align="center"> <img src="./docs/demo.gif" alt="Animated demo of the responsive four card feature section layout" /> </p>
 
-## Overview
+---
 
-### The challenge
+## 📸 Screenshots
 
-Users should be able to:
+### 📱 Mobile
 
-- View the optimal layout for the site depending on their device's screen size
+<p align="center"> <img src="./docs/mobile-default.avif" alt="Mobile layout showing stacked feature cards" /> </p>
 
-### Screenshot
+### 💻 Desktop
 
-![](./screenshot.jpg)
+<p align="center"> <img src="./docs/desktop-default.avif" alt="Desktop layout showing asymmetric grid arrangement of feature cards" /> </p>
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+### 💻 Interaction - Hover & Focus-Visible
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+<p align="center"> <img src="./docs/desktop-interaction.avif" alt="Hover and focus-visible interaction states on attribution links" /> </p>
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+---
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+## 🔗 Links
 
-### Links
+- 🌎 [Live site](https://vimpdev.github.io/fem-04-four-card-feature-section/)
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+<!-- - 👩‍💻 [Frontend Mentor solution](https://your-solution-url.com) -->
 
-## My process
+---
 
-### Built with
+## 🛠️ Built with
 
-- Semantic HTML5 markup
+- Semantic HTML5
 - CSS custom properties
-- Flexbox
-- CSS Grid
+- Native CSS Nesting
+- CSS Grid (with `grid-template-areas`)
+- Logical properties (`inline-size`, `block-size`)
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Modern accessibility practices
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+---
 
-### What I learned
+## 🧠 Technical Highlights
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+### 1️⃣ Grid Architecture with Template Areas
 
-To see how you can add code snippets, see below:
+The layout uses grid-template-areas to create an asymmetric card distribution across breakpoints:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+- Single column on mobile
+- Two-column structured layout on tablet
+- Three-column asymmetric grid on desktop
+
+This approach keeps layout logic explicit and readable.
+
+### 2️⃣ Native CSS Nesting
+
+Styles are organized using native CSS nesting, including:
+
+- Nested element selectors
+- Media queries inside components
+- Pseudo-classes like :hover, :focus-visible
+- Pseudo-elements like ::after
+
+Example pattern used:
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+.features__header {
+  h1 {
+    span {
+      font-weight: 200;
+    }
+  }
+
+  @media (width >= 1366px) {
+    padding-top: 6.5rem;
+  }
 }
 ```
+This improves readability and keeps related styles grouped.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+### 3️⃣ Accessibility Considerations
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- Proper heading hierarchy
+- `visually-hidden` utility for screen readers
+- `aria-hidden="true"` on decorative images
+- `:focus-visible` for keyboard accessibility
+- Meaningful `og:image:alt` and `twitter:image:alt` meta tags
 
-### Continued development
+### 4️⃣ Component Responsibility
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+The .card component uses a controlled max-inline-size to prevent excessive growth when spanning multiple grid areas, ensuring visual balance across breakpoints.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+---
 
-### Useful resources
+## 📈 What I learned
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- How `grid-template-areas` interacts with column sizing across breakpoints
+- When to control width at layout level vs component level
+- How native CSS nesting improves maintainability
+- The importance of logical properties for more flexible layouts
+- The difference between visual structure and semantic structure
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+---
 
-### AI Collaboration
+## 🤖 AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
+AI tools were used to:
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
+- Refine layout decisions and architectural trade-offs
+- Improve commit message clarity
+- Optimize meta tag structure
+- Review accessibility and semantic decisions
 
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+The goal was not code generation, but architectural discussion and refinement.
 
-## Author
+---
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+## 👤 Author
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@vimpdev](https://www.frontendmentor.io/profile/vimpdev)
